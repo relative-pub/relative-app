@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Relative</string>
+    <string name="movie_db_base_url">https://api.themoviedb.org/3/</string>
+    <string name="movie_db_api_key">aba64ecd9ec002df8f2ea9b00d01416c</string>
+    <string name="invalid_movie_id">Código do filme inválido</string>
+</resources>
