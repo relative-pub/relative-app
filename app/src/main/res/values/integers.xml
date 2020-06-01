@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="google_signIn_RC">1</integer>
+    <integer name="IMAGE_PICK_CODE">2</integer>
+    <integer name="EXTERNAL_STORAGE_PERMISSION">3</integer>
+    <integer name="PERMISSION_GRANTED">3</integer>
+    <integer name="ACTIVITY_RESULT_OK">-1</integer>
+</resources>

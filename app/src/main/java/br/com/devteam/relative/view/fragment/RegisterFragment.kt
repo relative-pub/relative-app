@@ -11,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import br.com.devteam.relative.databinding.RegisterFragmentBinding
 import br.com.devteam.relative.viewmodel.AuthViewModel
 import br.com.devteam.relative.R
+import br.com.devteam.relative.view.activity.HostActivity
 
 class RegisterFragment : Fragment() {
 
@@ -20,6 +21,7 @@ class RegisterFragment : Fragment() {
     }
 
     lateinit var binding: RegisterFragmentBinding
+    var hostActivity: HostActivity? = null
 
     private val viewModel: AuthViewModel by lazy {
         ViewModelProvider(this).get(AuthViewModel::class.java)
@@ -34,7 +36,7 @@ class RegisterFragment : Fragment() {
         binding.fragment = this@RegisterFragment
         binding.viewModel = viewModel
         binding.lifecycleOwner = this
-
+        hostActivity = activity as HostActivity
         return binding.root
     }
 
@@ -44,8 +46,9 @@ class RegisterFragment : Fragment() {
     }
 
     fun onSubmitForm(view: View) {
-
+        hostActivity?.showLoading()
         viewModel.createUser {
+            hostActivity?.hideLoading()
             if (it!!.success) {
                 println("email: ${viewModel.email.value}, password: ${viewModel.password.value}")
 

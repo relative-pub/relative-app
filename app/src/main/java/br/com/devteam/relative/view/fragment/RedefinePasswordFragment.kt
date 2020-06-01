@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import br.com.devteam.relative.R
 import br.com.devteam.relative.databinding.RedefinePasswordFragmentBinding
+import br.com.devteam.relative.view.activity.HostActivity
 import br.com.devteam.relative.viewmodel.AuthViewModel
 
 class RedefinePasswordFragment : Fragment() {
@@ -18,6 +19,8 @@ class RedefinePasswordFragment : Fragment() {
         fun newInstance() =
             RedefinePasswordFragment()
     }
+
+    var hostActivity: HostActivity? = null
 
     private lateinit var binding: RedefinePasswordFragmentBinding
 
@@ -36,6 +39,7 @@ class RedefinePasswordFragment : Fragment() {
         binding.fragment = this@RedefinePasswordFragment
         binding.lifecycleOwner = this
 
+        hostActivity = activity as HostActivity
         return binding.root
     }
 
@@ -45,8 +49,9 @@ class RedefinePasswordFragment : Fragment() {
     }
 
     fun resetEmail(view: View) {
-
+        hostActivity?.showLoading()
         viewModel.sendPasswordResetEmail {
+            hostActivity?.hideLoading()
             if (it!!.success) {
                 println("email: ${viewModel.email.value}")
 

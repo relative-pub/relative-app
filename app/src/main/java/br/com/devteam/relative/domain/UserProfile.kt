@@ -1,11 +1,16 @@
 package br.com.devteam.relative.domain
 
+import br.com.devteam.relative.enums.ProfileVisibilityEnum
+
 data class UserProfile(
-    var token: String? = null,
-    var displayName: String? = null,
+    var uid: String? = null,
+    var userName: String? = null,
     var email: String? = null,
-    var href: String? = null,
-    var id: String? = null,
-    var type: String? = null,
-    var nickmane: String? = null
+    var displayName: String? = null,
+    var photoUrl: String? = null,
+    var bio: String? = null,
+    var birthDate: String? = null,
+    var socialMedia: List<SocialMedia>? = null,
+    var categories: List<Category>? = null,
+    var visibilityEnum: ProfileVisibilityEnum? = null
 )

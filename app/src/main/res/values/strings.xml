@@ -3,4 +3,31 @@
     <string name="movie_db_base_url">https://api.themoviedb.org/3/</string>
     <string name="movie_db_api_key">aba64ecd9ec002df8f2ea9b00d01416c</string>
     <string name="invalid_movie_id">Código do filme inválido</string>
+
+    <!-- Side menu project -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <!-- Drawer-->
+    <string name="menu_home">Home</string>
+    <string name="menu_profile">Perfil</string>
+    <string name="menu_preference">Preferências</string>
+    <string name="menu_category">Categorias</string>
+    <string name="menu_about">Sobre</string>
+    <string name="menu_logout">Sair</string>
+
+    <!--    Firebase ref-->
+    <string name="user_profile_image_ref">user_profile_image</string>
+    <string name="category_card_image_ref">category_card_image</string>
+    <string name="category_ref">category</string>
+    <string name="user_profile_ref">user_profile</string>
+    <string name="tv_lbl_display_name">Nome</string>
+    <string name="lbl_bio">Bio</string>
+    <string name="lbl_visibility">Visibilidade do Perfil</string>
+    <string name="switch_visibility">Perfil Público?</string>
+
+    <string name="menu_item_search_bar_hint">Digite aqui...</string>
 </resources>

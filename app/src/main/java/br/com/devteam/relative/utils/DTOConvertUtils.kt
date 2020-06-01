@@ -1,6 +1,6 @@
 package br.com.devteam.relative.utils
 
-import br.com.devteam.relative.repository.dto.DTO
+import br.com.devteam.relative.interfaces.DTO
 
 fun <T> listDTOToDomainList(listDTO: List<DTO<T>>?): List<T> {
     val list = mutableListOf<T>()
